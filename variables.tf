@@ -26,17 +26,19 @@ variable "ipxe_script" {
   default = "https://raw.githubusercontent.com/ibrokethecloud/equinix-demo-days/main/ipxe/ipxe-"
 }
 
-variable "hostname_prefix" {
-  default = "harvester-pxe"
+variable "primary_hostname_prefix" {
+  default = "harvester-demo-days-primary"
 }
 
+variable "secondary_hostname_prefix" {
+  default = "harvester-demo-days-secondary"
+}
 
 variable "ssh_key" {
   default     = ""
   description = "Your ssh key, examples: 'github: myghid' or 'ssh-rsa AAAAblahblah== keyname'"
 }
 
-variable "vlan_attachment" {
-  default     = "100"
-  description = "default vlan to attach layer2 interfaces to"
+variable "vlan_id" {
+  default = ""
 }

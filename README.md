@@ -9,3 +9,11 @@ The terraform module, will place convert the bond1 interface on the instances fr
 It will then attach eth1 from bond1 to the vlan ID 100. 
 
 The output will provide details of the mac addresses for interfaces, as this makes it easier to identify device where sriov should be enabled.
+
+The following env variables / terraform variables need to be defined before use:
+
+```
+METAL_AUTH_TOKEN="metal-auth-token"
+TF_VAR_project_name="equinix-metal-project-name"
+TF_VAR_vlan_id="vlan-to-attach-eth1"
+```
